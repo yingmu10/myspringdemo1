@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-projectpath=/usr/local/mysoft/springbootprojects
-java -jar $projectpath/myspringbootdemo1.jar
+tomcatpath=/usr/local/mysoft/tomcats/tomcat8082
+cd $tomcatpath/bin
+sh startup.sh

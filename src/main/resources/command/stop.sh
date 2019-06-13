@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 echo "Stopping project"
-pid=`lsof -i:8082 | grep -v grep | awk '{print $2}'`
+projectport=8082
+lsof -i:$projectport
+pid=`lsof -i:$projectport | grep -v grep | awk '{print $2}'`
 if [ -n "$pid" ]
 then
    echo "shutdown tomcat" $pid
